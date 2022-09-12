@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); /* Font for title */
+
+*{
+    font-family: 'Playfair Display', serif;
+}
+
+#site-title{
+    font-size: 10rem;
+    text-align: center;    
+}
+
+#site-desc{
+    font-size: 5rem;
+    text-align: center;
+}
+
+#main-nav{
+    margin: 2rem;
+}
+
+#post-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#search-bar{
+    width: 20rem;
+}
+
+#navigate-create{
+margin-left: 1rem;
+}
+
+.post-buttons{
+    width: 6rem;
+}
+
+#card{
+    font-size: x-large;
+    background-color: rgb(211, 211, 211);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.profile-msg{
+    background-color: rgb(211, 211, 211);
+    font-size: x-large;
+}
+
+#register-submit{
+    margin-left: 1rem;
+}
+
+#login-submit {
+    margin-left: 1rem;
+}
