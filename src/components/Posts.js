@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import TextField from '@mui/material/TextField';
 import Card from '@mui/material/Card';
+import { Typography } from '@mui/material';
 
 const Posts = ({posts, navigate, token}) => {
 
@@ -44,13 +45,17 @@ const Posts = ({posts, navigate, token}) => {
                         {
                             isAuthor ? (
                                 <>
-                                <ButtonGroup variant="contained">
-                                    <Button className="post-buttons"><Link to={`/posts/edit-post/${_id}`}>Edit</Link></Button>
-                                    <Button className="post-buttons" onClick={()=> deletePost(token, _id)}>Delete</Button>
-                                </ButtonGroup>
+                                <Typography align = 'left'>
+                                    <ButtonGroup variant="contained">
+                                        <Button className="post-buttons"><Link to={`/posts/edit-post/${_id}`}>Edit</Link></Button>
+                                        <Button className="post-buttons" onClick={()=> deletePost(token, _id)}>Delete</Button>
+                                    </ButtonGroup>
+                                </Typography>    
                                 </>
                             ) : (
-                                <Button className="post-buttons" variant="contained"><Link to={`/posts/${_id}`}>View</Link></Button>
+                                <Typography align= 'left'>    
+                                    <Button className="post-buttons" variant="contained"><Link to={`/posts/${_id}`}>View</Link></Button>
+                                </Typography>
                                 )
                             }
                         </Card>

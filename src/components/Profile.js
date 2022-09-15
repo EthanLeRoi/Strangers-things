@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Card from '@mui/material/Card';
+import Paper from '@mui/material/Paper';
 
 const Profile = ({user}) => {
     const messages = user.messages;
@@ -17,13 +18,13 @@ const Profile = ({user}) => {
                 const {title} = message.post;
                 if (userID !== fromUserID) {
                 return(
+                <Paper elevation={24} className="profile-msg">
                     <div key={message._id}>
-                        <Card className="profile-msg">
                             <p>From: {username}</p>
                             <p>Post: {title}</p>
                             <p>Message: {message.content}</p>
-                        </Card>
                     </div>
+                </Paper>
                 )
               }
             })
@@ -40,11 +41,11 @@ const Profile = ({user}) => {
                 if (userID === fromUserID) {
                 return(
                     <div key={message._id}>
-                            <Card className="profile-msg">
+                            <Paper elevation={24} className="profile-msg">
                                 <p>(From Me)</p>
                                 <p>Post: {title}</p>
                                 <p>Message: {message.content}</p>
-                            </Card>
+                            </Paper>
                         </div>
                 )
               }

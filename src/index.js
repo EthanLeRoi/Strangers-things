@@ -68,7 +68,7 @@ useEffect (() => {
         <div>
             <Navbar logout={logout} token={token}/>  
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home token={token}/>} />
               <Route path="/posts" element={<Posts posts={posts} navigate={navigate} token={token}/>} />
               <Route path="/profile" element={<Profile user={user}/>} />
               <Route path='/register' element={<Register setToken={setToken} token={token} navigate={navigate}/>} />

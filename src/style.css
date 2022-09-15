@@ -14,6 +14,13 @@
     text-align: center;
 }
 
+.home-nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 #main-nav{
     margin: 2rem;
 }
